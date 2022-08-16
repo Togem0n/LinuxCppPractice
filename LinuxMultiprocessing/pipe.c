@@ -3,7 +3,13 @@
 #include <unistd.h>
 #include <string.h>
 
+// when using unnamed pipe which is just pipe to communicate (only between parent process and child process)
+// - make pipe and check existence
+// - array (2 elements) one for read and one for write file descriptor
+// - calling read & write function in the corresponding process
+
 int main(){
+
     int pipefd[2];
     int ret = pipe(pipefd);
 

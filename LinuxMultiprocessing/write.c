@@ -6,6 +6,13 @@
 #include <fcntl.h>
 #include <string.h>
 
+// when using name process to communicate, which is fifo
+// - make fifo and check existence
+// - fifo is a specific file type and depends on what kind of accessibility we gave him
+// - fifo plays different roles
+// - when writing to fifo, set write only and calling write function
+// - when reading from fifo, set read only and calling read function
+
 int main(){
 
     // pipe is also a kind of file
